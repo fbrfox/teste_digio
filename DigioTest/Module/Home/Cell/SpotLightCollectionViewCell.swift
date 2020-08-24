@@ -7,7 +7,25 @@
 //
 
 import UIKit
+import moa
 
 class SpotLightCollectionViewCell: UICollectionViewCell {
+ 
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var ivSpotlight: UIImageView!
+    static let CellIdentifier = "SpotLightCollectionViewCellIdentifier"
+    
+    
+    override func awakeFromNib() {
+          super.awakeFromNib()
+          
+    }
+    
+    
+    func displayCell(spotLight: Spotlight){
+        
+        ivSpotlight.moa.url = spotLight.bannerURL
+        
+    }
     
 }
